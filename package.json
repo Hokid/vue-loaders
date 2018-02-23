@@ -1,13 +1,40 @@
 {
   "name": "vue-loaders",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "homepage": "https://github.com/Hokid/vue-loaders",
+  "description": "Vue components for loaders.css (https://github.com/ConnorAtherton/loaders.css)",
+  "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build ./src/index.js --target lib --name VueLoaders --dest dist",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist",
+    "src",
+    "demo.html"
+  ],
+  "main": "dist/VueLoaders.umd.js",
+  "style": "dist/VueLoaders.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hokid/vue-loaders.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hokid/vue-loaders/issues"
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-loaders",
+    "loaders",
+    "loaders.css",
+    "animation",
+    "animate"
+  ],
   "dependencies": {
+    "loaders.css": "^0.1.2",
     "vue": "^2.5.13"
   },
   "devDependencies": {

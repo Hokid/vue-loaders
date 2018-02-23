@@ -1,0 +1,15 @@
+<title>VueLoaders demo</title>
+<script src="https://unpkg.com/vue"></script>
+<script src="./dist/VueLoaders.umd.js"></script>
+<link rel="stylesheet" href="./dist/VueLoaders.css">
+
+<div id="app">
+  <ball-pulse-loader color="#000000"></ball-pulse-loader>
+  <ball-grid-pulse-loader color="#000000"></ball-grid-pulse-loader>
+  <ball-grid-pulse-loader color="#000000" columns="4"></ball-grid-pulse-loader>
+</div>
+
+<script>
+Vue.use(VueLoaders);
+new Vue().$mount('#app')
+</script>
