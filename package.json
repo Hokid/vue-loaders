@@ -11,8 +11,8 @@
     "lint": "vue-cli-service lint"
   },
   "files": [
-    "dist",
-    "src",
+    "dist/",
+    "src/",
     "demo.html"
   ],
   "module": "dist/VueLoaders.umd.js",
