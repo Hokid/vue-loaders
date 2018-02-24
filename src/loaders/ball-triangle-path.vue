@@ -1,11 +1,5 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="ball-triangle-path vue-loaders" :style="rootStyle">
     <div :style="styles"></div>
     <div :style="styles"></div>
     <div :style="styles"></div>
@@ -13,16 +7,23 @@
 </template>
 
 <script>
+  const BORDER_RATION = 1 / 10;
+
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'BallTrianglePathLoader',
     props: {
       size: String,
       color: String
     },
     computed: {
-      rootStyles() {
-        return {
-          width: `calc(3 * (${this.size || '15px'} + 4px))`
+      rootStyle () {
+        const size = this.size ? String(this.size) : null;
+
+        if (size) {
+          return {
+            width: `calc(${size} + 50px)`,
+            height: `calc(${size} + 50px)`
+          };
         }
       },
       styles() {
@@ -37,6 +38,7 @@
 
         if (size) {
           styles.width = styles.height = size;
+          styles.borderWidth = `calc(${size} * ${BORDER_RATION})`;
         }
 
         if (color) {

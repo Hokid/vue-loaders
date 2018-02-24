@@ -1,12 +1,5 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="cube-transition vue-loaders" :style="rootStyle">
     <div :style="styles"></div>
     <div :style="styles"></div>
   </div>
@@ -14,15 +7,20 @@
 
 <script>
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'CubeTransitionLoader',
     props: {
       size: String,
       color: String
     },
     computed: {
-      rootStyles() {
-        return {
-          width: `calc(3 * (${this.size || '15px'} + 4px))`
+      rootStyle() {
+        const size = this.size ? String(this.size) : null;
+
+        if (size) {
+          return {
+            width: `calc(${size} + 50px)`,
+            height: `calc(${size} + 50px)`
+          };
         }
       },
       styles() {

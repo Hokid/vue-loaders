@@ -1,0 +1,158 @@
+.vue-loaders {
+  display: inline-block;
+  box-sizing: content-box;
+}
+
+.vue-loaders *,
+.vue-loaders *:before,
+.vue-loaders *:after {
+  box-sizing: inherit;
+}
+
+.vue-loaders.ball-grid-pulse:before,
+.vue-loaders.ball-grid-pulse:after {
+  content: '';
+  display: table;
+}
+
+.vue-loaders.ball-grid-pulse:after {
+  clear: both;
+}
+
+.vue-loaders.ball-clip-rotate-pulse {
+  transform: none;
+}
+
+.vue-loaders.ball-clip-rotate-multiple > div,
+.vue-loaders.ball-clip-rotate-multiple > div:last-child {
+  left: auto;
+  top: auto;
+}
+
+.vue-loaders.square-spin > div {
+  border: 0;
+}
+
+.vue-loaders.ball-rotate > div:before,
+.vue-loaders.ball-rotate > div:after {
+  display: none;
+}
+
+.vue-loaders.ball-rotate {
+  padding: 26px;
+}
+
+.vue-loaders.ball-rotate > div {
+  margin: 0;
+}
+
+.vue-loaders.ball-rotate > div > div {
+  top: auto;
+  position: absolute;
+  opacity: .8;
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+.vue-loaders.ball-rotate > div > div:first-child {
+  left: -26px;
+}
+
+.vue-loaders.ball-rotate > div > div:last-child {
+  left: 26px;
+}
+
+.vue-loaders.cube-transition {
+  transform: none;
+  width: 60px;
+  height: 60px;
+}
+
+.vue-loaders.cube-transition > div {
+  left: auto;
+  top: auto;
+}
+
+.vue-loaders.ball-zig-zag,
+.vue-loaders.ball-zig-zag-deflect {
+  transform: none;
+  height: 15px;
+  width: 15px;
+  padding: 30px 15px;
+}
+
+.vue-loaders.ball-zig-zag > div,
+.vue-loaders.ball-zig-zag-deflect > div {
+  left: auto;
+  top: auto;
+  margin: 0;
+}
+
+.vue-loaders.ball-triangle-path {
+  transform: none;
+  width: 60px;
+  height: 60px;
+}
+
+.vue-loaders.ball-scale-multiple {
+  transform: none;
+  width: 60px;
+  height: 60px;
+}
+
+.vue-loaders.ball-scale-multiple > div {
+  top: auto;
+  left: auto;
+}
+
+.vue-loaders.ball-scale-ripple-multiple {
+  transform: none;
+  width: 54px;
+  height: 54px;
+}
+
+.vue-loaders.ball-scale-ripple-multiple > div {
+  top: auto;
+  left: auto;
+}
+
+.vue-loaders.ball-spin-fade-loader {
+  top: auto;
+  left: auto;
+  border: 25px solid transparent;
+  width: 15px;
+  height: 15px;
+}
+
+.vue-loaders.ball-spin-fade-loader > div {
+  margin: 0;
+}
+
+.vue-loaders.line-spin-fade-loader {
+  top: auto;
+  left: auto;
+  border: 20px solid transparent;
+  width: 15px;
+  height: 15px;
+}
+
+.vue-loaders.line-spin-fade-loader > div {
+  margin: 0;
+}
+
+.vue-loaders.pacman {
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.vue-loaders.pacman > div:nth-child(1n + 3) {
+  margin: 0;
+}
+
+.vue-loaders.ball-pulse-rise {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+

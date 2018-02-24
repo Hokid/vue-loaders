@@ -1,11 +1,6 @@
 import 'loaders.css';
-import BallPulseLoader from './loaders/ball-pulse';
-import BallGridPulseLoader from './loaders/ball-grid-pulse';
-
-const components = {
-  BallPulseLoader,
-  BallGridPulseLoader
-}
+import './style.css';
+import * as components from './loader';
 
 export default function install(Vue) {
   const compKeys = Object.keys(components);
@@ -17,7 +12,4 @@ export default function install(Vue) {
   }
 }
 
-export {
-  BallPulseLoader,
-  BallGridPulseLoader
-};
+export * from './loader';

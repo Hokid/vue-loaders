@@ -1,30 +1,19 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="ball-clip-rotate vue-loaders">
     <div :style="styles"></div>
   </div>
 </template>
 
 <script>
+  const BORDER_RATION = 2 / 15;
+
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'BallClipRotateLoader',
     props: {
       size: String,
       color: String
     },
     computed: {
-      rootStyles() {
-        return {
-          width: `calc(3 * (${this.size || '15px'} + 4px))`
-        }
-      },
       styles() {
         const size = this.size ? String(this.size) : null;
         const color = this.color ? String(this.color) : null;
@@ -37,10 +26,13 @@
 
         if (size) {
           styles.width = styles.height = size;
+          styles.borderWidth = `calc(${size} * ${BORDER_RATION})`;
         }
 
         if (color) {
-          styles.backgroundColor = color;
+          styles.borderTopColor =
+            styles.borderRightColor =
+              styles.borderLeftColor = color;
         }
 
         return styles;

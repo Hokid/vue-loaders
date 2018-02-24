@@ -1,5 +1,5 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
+  <div class="ball-grid-beat vue-loaders" :style="rootStyles">
     <div :style="styles"></div>
     <div :style="styles"></div>
     <div :style="styles"></div>
@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'BallGridBeatLoader',
     props: {
       size: String,
       color: String

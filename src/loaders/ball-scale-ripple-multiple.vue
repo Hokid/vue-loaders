@@ -1,11 +1,5 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="ball-scale-ripple-multiple vue-loaders" :style="rootStyle">
     <div :style="styles"></div>
     <div :style="styles"></div>
     <div :style="styles"></div>
@@ -13,16 +7,23 @@
 </template>
 
 <script>
+  const BORDER_RATION = 2 / 50;
+
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'BallScaleRippleMultipleLoader',
     props: {
       size: String,
       color: String
     },
     computed: {
-      rootStyles() {
-        return {
-          width: `calc(3 * (${this.size || '15px'} + 4px))`
+      rootStyle() {
+        const size = this.size ? String(this.size) : null;
+
+        if (size) {
+          return {
+            width: `calc(${size} + ${size} * ${BORDER_RATION})`,
+            height: `calc(${size} + ${size} * ${BORDER_RATION})`,
+          };
         }
       },
       styles() {
@@ -37,10 +38,11 @@
 
         if (size) {
           styles.width = styles.height = size;
+          styles.borderWidth = `calc(${size} * ${BORDER_RATION})`;
         }
 
         if (color) {
-          styles.backgroundColor = color;
+          styles.borderColor = color;
         }
 
         return styles;

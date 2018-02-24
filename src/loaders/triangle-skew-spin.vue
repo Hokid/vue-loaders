@@ -1,14 +1,12 @@
 <template>
-  <div class="ball-pulse vue-loaders">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="triangle-skew-spin vue-loaders">
     <div :style="styles"></div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'BallPulseLoader',
+    name: 'TriangleSkewSpinLoader',
     props: {
       size: String,
       color: String
@@ -25,11 +23,13 @@
         const styles = {};
 
         if (size) {
-          styles.width = styles.height = size;
+          styles.borderLeftWidth =
+            styles.borderRightWidth =
+              styles.borderBottomWidth = `calc(${size} / 2)`
         }
 
         if (color) {
-          styles.backgroundColor = color;
+          styles.borderBottomColor = color;
         }
 
         return styles;

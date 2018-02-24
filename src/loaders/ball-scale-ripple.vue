@@ -1,30 +1,17 @@
 <template>
-  <div class="ball-grid-pulse vue-loaders" :style="rootStyles">
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
-    <div :style="styles"></div>
+  <div class="ball-scale-ripple vue-loaders">
     <div :style="styles"></div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'BallGridPulseLoader',
+    name: 'BallScaleRippleLoader',
     props: {
       size: String,
       color: String
     },
     computed: {
-      rootStyles() {
-        return {
-          width: `calc(3 * (${this.size || '15px'} + 4px))`
-        }
-      },
       styles() {
         const size = this.size ? String(this.size) : null;
         const color = this.color ? String(this.color) : null;
