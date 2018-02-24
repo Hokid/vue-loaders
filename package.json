@@ -1,8 +1,8 @@
 {
   "name": "vue-loaders",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/Hokid/vue-loaders",
-  "description": "Vue components for loaders.css (https://github.com/ConnorAtherton/loaders.css)",
+  "description": "Vue component wrappers for loaders.css (https://github.com/ConnorAtherton/loaders.css)",
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -15,6 +15,7 @@
     "src",
     "demo.html"
   ],
+  "module": "dist/VueLoaders.umd.js",
   "main": "dist/VueLoaders.umd.js",
   "style": "dist/VueLoaders.css",
   "repository": {

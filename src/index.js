@@ -2,7 +2,7 @@ import 'loaders.css';
 import './style.css';
 import * as components from './loader';
 
-export default function install(Vue) {
+function install(Vue) {
   const compKeys = Object.keys(components);
   let ln = compKeys.length;
 
@@ -12,4 +12,7 @@ export default function install(Vue) {
   }
 }
 
-export * from './loader';
+export default {
+  install,
+  ...components
+};
