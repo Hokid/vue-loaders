@@ -1,6 +1,6 @@
 # Vue Loaders
 
-Vue component wrappers for [Loaders.css](https://github.com/ConnorAtherton/loaders.css).
+Vue components for [loaders.css](https://github.com/ConnorAtherton/loaders.css).
 
 [Sandbox](http://hokid.github.com/vue-loaders?v=1)
 
