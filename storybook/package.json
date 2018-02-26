@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-loaders": "^1.0.0"
+    "vue-loaders": "latest"
   },
   "repository": {
     "type": "git",

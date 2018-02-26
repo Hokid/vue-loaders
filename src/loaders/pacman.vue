@@ -9,10 +9,7 @@
 </template>
 
 <script>
-  const LEFT_OFFSET_RATIO = 30 / 50;
   const CIRCLE_SIZE_RATIO = 10 / 50;
-  const CIRCLE_LEFT_OFFSET_RATIO = 70 / 50;
-  const CIRCLE_TOP_OFFSET_RATIO = 25 / 50;
 
   export default {
     name: 'PacmanLoader',
@@ -26,8 +23,7 @@
 
         if (size) {
           return {
-            borderLeftWidth: `calc(${size} * ${LEFT_OFFSET_RATIO})`,
-            borderRightWidth: `calc(${size} * (${CIRCLE_LEFT_OFFSET_RATIO} + ${CIRCLE_SIZE_RATIO}) - ${size})`
+            borderRightWidth: `calc(70px + ${CIRCLE_SIZE_RATIO} * ${size} - ${size})`
           };
         }
       },
@@ -43,9 +39,8 @@
 
         if (size) {
           styles.borderWidth =
-            styles.borderRadius = `calc(${size} / 2)`
-          styles.left = `calc(${size} * ${LEFT_OFFSET_RATIO} * -1)`
-          styles.marginTop = `calc(${size} * -1)`
+            styles.borderRadius = `calc(${size} / 2)`;
+          styles.marginTop = `calc(${size} * -1)`;
         }
 
         if (color) {
@@ -69,7 +64,6 @@
         if (size) {
           styles.borderWidth =
             styles.borderRadius = `calc(${size} / 2)`;
-          styles.left = `calc(${size} * ${LEFT_OFFSET_RATIO} * -1)`;
         }
 
         if (color) {
@@ -89,13 +83,12 @@
         }
 
         const styles = {};
+        const circleSize = `(${size} * ${CIRCLE_SIZE_RATIO})`;
 
         if (size) {
           styles.width =
-            styles.height = `calc(${size} * ${CIRCLE_SIZE_RATIO})`;
-          styles.top = `calc(${size} * ${CIRCLE_TOP_OFFSET_RATIO})`;
-          styles.left = `calc(${size} * ${CIRCLE_LEFT_OFFSET_RATIO})`;
-          styles.transform = `translateY(calc(${size} * ${CIRCLE_SIZE_RATIO} * -0.5))`;
+            styles.height = `calc(${circleSize})`;
+          styles.top = `calc(${size} * 0.5 + ${circleSize} / -2 + 6.25px)`;
         }
 
         if (color) {
