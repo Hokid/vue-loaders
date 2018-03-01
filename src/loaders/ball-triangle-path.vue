@@ -42,7 +42,7 @@
         }
 
         if (color) {
-          styles.backgroundColor = color;
+          styles.borderColor = color;
         }
 
         return styles;
