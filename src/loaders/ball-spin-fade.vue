@@ -209,4 +209,16 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-spin-fade-loader {
+    top: auto;
+    left: auto;
+    border: 25px solid transparent;
+    width: 15px;
+    height: 15px;
+  }
+
+  .vue-loaders.ball-spin-fade-loader > div {
+    margin: 0;
+  }
+</style>

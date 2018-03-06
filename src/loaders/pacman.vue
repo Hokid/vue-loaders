@@ -101,4 +101,13 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.pacman {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+
+  .vue-loaders.pacman > div:nth-child(1n + 3) {
+    margin: 0;
+  }
+</style>

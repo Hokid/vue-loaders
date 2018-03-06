@@ -67,4 +67,17 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-zig-zag-deflect {
+    transform: none;
+    height: 15px;
+    width: 15px;
+    padding: 30px 15px;
+  }
+
+  .vue-loaders.ball-zig-zag-deflect > div {
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+</style>

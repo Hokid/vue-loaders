@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { configure } from '@storybook/vue'
-import VueLoaders from 'vue-loaders';
+import * as VueLoaders from 'vue-loaders';
 import 'vue-loaders/dist/VueLoaders.css';
 
 Vue.use(VueLoaders);

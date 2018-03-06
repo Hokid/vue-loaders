@@ -94,4 +94,35 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-rotate > div:before,
+  .vue-loaders.ball-rotate > div:after {
+    display: none;
+  }
+
+  .vue-loaders.ball-rotate {
+    padding: 26px;
+  }
+
+  .vue-loaders.ball-rotate > div {
+    margin: 0;
+  }
+
+  .vue-loaders.ball-rotate > div > div {
+    top: auto;
+    position: absolute;
+    opacity: .8;
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+  }
+
+  .vue-loaders.ball-rotate > div > div:first-child {
+    left: -26px;
+  }
+
+  .vue-loaders.ball-rotate > div > div:last-child {
+    left: 26px;
+  }
+</style>

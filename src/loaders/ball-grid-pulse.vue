@@ -49,4 +49,14 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-grid-pulse:before,
+  .vue-loaders.ball-grid-pulse:after {
+    content: '';
+    display: table;
+  }
+
+  .vue-loaders.ball-grid-pulse:after {
+    clear: both;
+  }
+</style>

@@ -6,8 +6,7 @@
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build ./src/index.js --target lib --name VueLoaders --dest dist",
+    "build": "rollup -c",
     "lint": "vue-cli-service lint"
   },
   "files": [
@@ -15,9 +14,9 @@
     "src/",
     "demo.html"
   ],
-  "module": "dist/VueLoaders.umd.js",
-  "main": "dist/VueLoaders.umd.js",
-  "style": "dist/VueLoaders.css",
+  "main": "dist/vue-loaders.umd.js",
+  "module": "dist/vue-loaders.es.js",
+  "style": "dist/vue-loaders.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/Hokid/vue-loaders.git"
@@ -46,14 +45,20 @@
     "idle",
     "plugin"
   ],
-  "dependencies": {
-    "loaders.css": "^0.1.2",
-    "vue": "^2.5.13"
-  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.1",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.1",
     "@vue/cli-service": "^3.0.0-beta.1",
+    "autoprefixer": "^8.1.0",
+    "loaders.css": "^0.1.2",
+    "postcss-csso": "^3.0.0",
+    "rollup": "^0.56.4",
+    "rollup-plugin-babel": "^4.0.0-beta.2",
+    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-postcss": "^1.3.3",
+    "rollup-plugin-uglify": "^3.0.0",
+    "rollup-plugin-vue": "^3.0.0",
     "vue-template-compiler": "^2.5.13"
   },
   "babel": {
@@ -68,14 +73,9 @@
       "eslint:recommended"
     ]
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 10"
   ]
 }

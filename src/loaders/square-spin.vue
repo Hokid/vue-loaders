@@ -36,4 +36,8 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.square-spin > div {
+    border: 0;
+  }
+</style>

@@ -15,15 +15,46 @@ npm install -S vue-loaders
 
 ```JS
 import Vue from 'vue';
-import VueLoaders from 'vue-loaders';
-import 'vue-loaders/dist/VueLoaders.css';
+import 'vue-loaders/dist/vue-loaders.css';
+import * as VueLoaders from 'vue-loaders';
 
 Vue.use(VueLoaders);
-// or
-Vue.component(VueLoaders.BallBeat.name, VueLoaders.BallBeat);
-Vue.component(VueLoaders.BallZigZigDeflect.name, VueLoaders.BallZigZigDeflect);
-// ..etc
+
 ```
+
+Or:
+
+```JS
+import Vue from 'vue';
+import 'vue-loaders/dist/vue-loaders.css';
+import { BallBeatLoader } from 'vue-loaders';
+
+Vue.component(BallBeatLoader.name, BallBeatLoader);
+```
+
+Or:
+
+```JS
+import Vue from 'vue';
+import 'vue-loaders/dist/vue-loaders.css';
+import { BallBeatLoader, install } from 'vue-loaders';
+
+const VueLoaders = { BallBeatLoader, install };
+
+Vue.use(VueLoaders);
+```
+
+Or:
+
+```JS
+import Vue from 'vue';
+import 'vue-loaders/dist/vue-loaders.css';
+import { BallBeatLoader } from 'vue-loaders';
+
+new Vue({ components: { BallBeatLoader }, template: '<ball-beat-loader />' });
+```
+
+Or:
 
 ```HTML
 <!DOCTYPE html>
@@ -32,7 +63,7 @@ Vue.component(VueLoaders.BallZigZigDeflect.name, VueLoaders.BallZigZigDeflect);
     <title>VueLoaders demo</title>
     <script src="https://unpkg.com/vue"></script>
     <script src="https://unpkg.com/vue-loaders"></script>
-    <link rel="stylesheet" href="https://unpkg.com/vue-loaders/dist/VueLoaders.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-loaders/dist/vue-loaders.css">
   </head>
   <body>
     <div id="app">
@@ -47,3 +78,33 @@ Vue.component(VueLoaders.BallZigZigDeflect.name, VueLoaders.BallZigZigDeflect);
 </html>
 ```
 
+## Loaders
+
+ * BallBeatLoader
+ * BallClipRotateLoader
+ * BallClipRotateMultipleLoader
+ * BallClipRotatePulseLoader
+ * BallGridBeatLoader
+ * BallGridPulseLoader
+ * BallPulseLoader
+ * BallPulseRiseLoader
+ * BallPulseSyncLoader
+ * BallRotateLoader
+ * BallScaleLoader
+ * BallScaleMultipleLoader
+ * BallScaleRippleLoader
+ * BallScaleRippleMultipleLoader
+ * BallSpinFadeLoader
+ * BallTrianglePathLoader
+ * BallZigZagLoader
+ * BallZigZagDeflectLoader
+ * CubeTransitionLoader
+ * LineScaleLoader
+ * LineScalePartyLoader
+ * LineScalePulseOutLoader
+ * LineScalePulseOutRapidLoader
+ * LineSpinFadeLoader
+ * PacmanLoader
+ * SemiCircleSpinLoader
+ * SquareSpinLoader
+ * TriangleSkewSpinLoade

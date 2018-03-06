@@ -68,4 +68,10 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-clip-rotate-multiple > div,
+  .vue-loaders.ball-clip-rotate-multiple > div:last-child {
+    left: auto;
+    top: auto;
+  }
+</style>

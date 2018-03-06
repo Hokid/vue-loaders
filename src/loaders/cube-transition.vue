@@ -47,4 +47,15 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.cube-transition {
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+
+  .vue-loaders.cube-transition > div {
+    left: auto;
+    top: auto;
+  }
+</style>

@@ -51,4 +51,10 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-triangle-path {
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+</style>

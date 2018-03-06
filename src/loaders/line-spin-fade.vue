@@ -227,4 +227,16 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.line-spin-fade-loader {
+    top: auto;
+    left: auto;
+    border: 20px solid transparent;
+    width: 15px;
+    height: 15px;
+  }
+
+  .vue-loaders.line-spin-fade-loader > div {
+    margin: 0;
+  }
+</style>

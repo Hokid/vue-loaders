@@ -78,4 +78,8 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-clip-rotate-pulse {
+    transform: none;
+  }
+</style>

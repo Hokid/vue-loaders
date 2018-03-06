@@ -40,4 +40,9 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-pulse-rise {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+</style>

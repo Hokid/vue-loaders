@@ -48,4 +48,15 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-scale-multiple {
+    transform: none;
+    width: 60px;
+    height: 60px;
+  }
+
+  .vue-loaders.ball-scale-multiple > div {
+    top: auto;
+    left: auto;
+  }
+</style>

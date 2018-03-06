@@ -51,4 +51,15 @@
   }
 </script>
 
-<style></style>
+<style>
+  .vue-loaders.ball-scale-ripple-multiple {
+    transform: none;
+    width: 54px;
+    height: 54px;
+  }
+
+  .vue-loaders.ball-scale-ripple-multiple > div {
+    top: auto;
+    left: auto;
+  }
+</style>
