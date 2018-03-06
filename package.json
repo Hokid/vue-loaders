@@ -1,6 +1,6 @@
 {
   "name": "vue-loaders",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "homepage": "https://github.com/Hokid/vue-loaders",
   "description": "Vue component wrappers for loaders.css (https://github.com/ConnorAtherton/loaders.css)",
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
