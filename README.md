@@ -107,4 +107,4 @@ Or:
  * PacmanLoader
  * SemiCircleSpinLoader
  * SquareSpinLoader
- * TriangleSkewSpinLoade
+ * TriangleSkewSpinLoader
