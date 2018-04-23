@@ -32,7 +32,7 @@ import { BallBeatLoader } from 'vue-loaders';
 Vue.component(BallBeatLoader.name, BallBeatLoader);
 ```
 
-Or:
+Or - to import 1 loader excluding the rest:
 
 ```JS
 import Vue from 'vue';
@@ -40,6 +40,19 @@ import 'vue-loaders/dist/vue-loaders.css';
 import { BallBeatLoader, install } from 'vue-loaders';
 
 const VueLoaders = { BallBeatLoader, install };
+
+Vue.use(VueLoaders);
+```
+^ note: `install` must be used on the end of the object.
+
+Or - to import more than 1 loaders excluding the rest e.g. import BallBeatLoader & BallClipRotateMultipleLoader only:
+
+```JS
+import Vue from 'vue';
+import 'vue-loaders/dist/vue-loaders.css';
+import { BallBeatLoader, BallClipRotateMultipleLoader, install } from 'vue-loaders';
+
+const VueLoaders = { BallBeatLoader, BallClipRotateMultipleLoader, install };
 
 Vue.use(VueLoaders);
 ```
