@@ -28,8 +28,6 @@ Vue.use(VueLoaders);
 
 ```
 
-Or:
-
 ```JS
 import Vue from 'vue';
 import 'vue-loaders/dist/vue-loaders.css';
@@ -38,19 +36,15 @@ import { BallBeatLoader } from 'vue-loaders';
 Vue.component(BallBeatLoader.name, BallBeatLoader);
 ```
 
-Or:
-
 ```JS
 import Vue from 'vue';
 import 'vue-loaders/dist/vue-loaders.css';
-import { BallBeatLoader, install } from 'vue-loaders';
+import { BallBeatLoader, BallClipRotateLoader, install } from 'vue-loaders';
 
-const VueLoaders = { BallBeatLoader, install };
+const VueLoaders = { BallBeatLoader, BallClipRotateLoader, install };
 
 Vue.use(VueLoaders);
 ```
-
-Or:
 
 ```JS
 import Vue from 'vue';
@@ -75,7 +69,6 @@ Or:
     <div id="app">
       <ball-pulse-loader color="#000000" size="20px"></ball-pulse-loader>
     </div>
-
     <script>
       Vue.use(VueLoaders);
       new Vue().$mount('#app');
