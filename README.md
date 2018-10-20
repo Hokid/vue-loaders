@@ -54,8 +54,6 @@ import { BallBeatLoader } from 'vue-loaders';
 new Vue({ components: { BallBeatLoader }, template: '<ball-beat-loader />' });
 ```
 
-Or:
-
 ```HTML
 <!DOCTYPE html>
 <html>
