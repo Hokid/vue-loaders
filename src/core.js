@@ -23,7 +23,6 @@ export function createLoaderComponent(mixin) {
     originName,
     component,
     install(Vue) {
-      console.log(name, this.component);
       Vue.component(name, this.component);
     }
   }
