@@ -1,7 +1,7 @@
 export function getLoaderName(fileName) {
   return 'VueLoaders' + fileName
     .replace(/\..+/, '')
-    .replace(/-[\w]g/, (match) => match.slice(-1).toUpperCase())
+    .replace(/-[\w]/g, (match) => match.slice(-1).toUpperCase())
     .replace(/^\w/, (match) => match.toUpperCase());
 }
 
@@ -23,6 +23,7 @@ export function createLoaderComponent(mixin) {
     originName,
     component,
     install(Vue) {
+      console.log(name, this.component);
       Vue.component(name, this.component);
     }
   }
