@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 version=$1
 
-./scripts/build.sh
-npm version ${version}
+npm run build
+npm version ${version} -m 'chore: up to %s'
 npm publish
-cd storybook
-npm install -S vue-loaders@latest
-npm run deploy-storybook
