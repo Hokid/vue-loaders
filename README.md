@@ -4,7 +4,7 @@
   Based on <a href="https://github.com/ConnorAtherton/loaders.css">loaders.css</a>
 </div>
 <div align="center">
-  <img src="vue-loaders.gif" alt="Preview" width="600" height="250">
+  <img src="vue-loaders.gif" alt="Preview" width="600" height="250" />
 </div>
 <div align="center">
   <a href="http://hokid.github.com/vue-loaders?v=1">Sandbox</a>
@@ -20,11 +20,11 @@ $ npm install -S vue-loaders
 
 * umd: https://unpkg.com/vuex-up/dist/vue-loaders.umd.js
 * esm/mjs: https://unpkg.com/vuex-up/dist/vue-loaders.esm.js
-* umd: https://unpkg.com/vuex-up/dist/loaders/< [any name](#loaders-names) >.js
+* umd: https://unpkg.com/vuex-up/dist/loaders/{ [loader name](#loaders-names) }.js
 
 ## Usage
 
-If you prefer `<vue-loaders name="{loader name}">` syntax take look for available [names](#single-component-valid-names). If you prefer `<vue-loaders-{loader name}>` syntax go to this [list](#components).
+If you prefer `<vue-loaders name="{loader name}">` syntax take look for available [names](#loaders-names). If you prefer `<vue-loaders-{loader name}>` syntax go to this [list](#components).
 
 ```javascript
 import Vue from 'vue';
