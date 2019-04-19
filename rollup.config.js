@@ -17,7 +17,8 @@ function createBundleOptionsForLoaders(loaders) {
     output: {
       name: getLoaderName(fileName),
       file: `./dist/loaders/${fileName}`,
-      format: 'umd'
+      format: 'umd',
+      esModule: true
     },
     plugins: [
       resolve(),
@@ -37,7 +38,8 @@ export default [
       name: 'VueLoaders',
       file: pkg.main,
       format: 'umd',
-      exports: 'default'
+      exports: 'default',
+      esModule: true
     },
     plugins: [
       resolve(),
