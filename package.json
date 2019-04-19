@@ -14,7 +14,8 @@
     "src/",
     "demo.html",
     "vue-loaders.gif",
-    "README.md"
+    "README.md",
+    "LICENSE.md"
   ],
   "main": "dist/vue-loaders.umd.js",
   "module": "dist/vue-loaders.esm.js",
