@@ -27,6 +27,7 @@ function createBundleOptionsForLoaders(loaders) {
         exclude: ['node_modules/**'],
         runtimeHelpers: true
       }),
+      uglify()
     ]
   }));
 }
@@ -56,7 +57,7 @@ export default [
         exclude: ['node_modules/**'],
         runtimeHelpers: true
       }),
-      // uglify()
+      uglify()
     ]
   },
   {
