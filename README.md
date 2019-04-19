@@ -6,6 +6,9 @@
 <div align="center">
   <img src="vue-loaders.gif" alt="Preview" width="600" height="250" />
 </div>
+<div align="center">
+    <a href="https://www.npmjs.com/package/vue-loaders"><img src="https://img.shields.io/npm/v/vue-loaders.svg" alt="Version" /></a>
+</div>
 
 [< previous version](https://github.com/Hokid/vue-loaders/tree/34e07c7c88e602423e497427e9f322692bd336d4)
 
