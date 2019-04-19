@@ -7,6 +7,8 @@
   <img src="vue-loaders.gif" alt="Preview" width="600" height="250" />
 </div>
 
+[< previous version](https://github.com/Hokid/vue-loaders/tree/34e07c7c88e602423e497427e9f322692bd336d4)
+
 ## NPM
 
 ```bash
