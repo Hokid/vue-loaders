@@ -15,9 +15,9 @@ $ npm install -S vue-loaders
 
 ## CDN
 
-* umd: https://unpkg.com/vuex-up/dist/vue-loaders.umd.js
-* esm/mjs: https://unpkg.com/vuex-up/dist/vue-loaders.esm.js
-* umd: https://unpkg.com/vuex-up/dist/loaders/{ [loader name](#loaders-names) }.js
+* umd: https://unpkg.com/vue-loaders/dist/vue-loaders.umd.js
+* esm/mjs: https://unpkg.com/vue-loaders/dist/vue-loaders.esm.js
+* umd: `https://unpkg.com/vue-loaders/dist/loaders/`[loader name](#loaders-names)`.js`
 
 ## Usage
 
