@@ -28,71 +28,88 @@ If you prefer `<vue-loaders-{loader name}>` syntax go to [components list](#comp
 For avaliable props see [props](#props).
 
 ```javascript
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.esm.browser';
 import 'vue-loaders/dist/vue-loaders.css';
 import VueLoaders from 'vue-loaders';
 
 Vue.use(VueLoaders);
 
 const template = `
-  <vue-loaders-ball-beat color="red" scale="2"></vue-loaders-ball-beat>
-  <vue-loaders name="ball-beat" color="red" scale="2"></vue-loaders>
+<div>
+  <vue-loaders-ball-beat color="red" scale="1"></vue-loaders-ball-beat>
+  <hr/>
+  <vue-loaders name="ball-beat" color="red" scale="1"></vue-loaders>
+</div>
 `;
 
 new Vue({
   template
-});
+}).$mount('#app');
 ```
 
 ```javascript
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.esm.browser';
 import 'vue-loaders/dist/vue-loaders.css';
-import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat.js';
+import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat';
 
 Vue.use(VueLoadersBallBeat);
 
 const template = `
-  <vue-loaders-ball-beat color="red" scale="3"></vue-loaders-ball-beat>
+  <vue-loaders-ball-beat color="red" scale="1"></vue-loaders-ball-beat>
 `;
 
 new Vue({
   template
-});
+}).$mount('#app');
 ```
 
 ```javascript
-import Vue from 'vue';
+import Vue from 'vue/dist/vue.esm.browser';
 import 'vue-loaders/dist/vue-loaders.css';
 import VueLoaders from 'vue-loaders';
 
 Vue.component('my-name', VueLoaders.component);
-```
-
-```javascript
-import Vue from 'vue';
-import 'vue-loaders/dist/vue-loaders.css';
-import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat.js';
-
-Vue.component('my-name', VueLoadersBallBeat.component);
-```
-
-```javascript
-import Vue from 'vue';
-import 'vue-loaders/dist/vue-loaders.css';
-import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat.js';
-
-Vue.use(VueLoadersBallBeat);
 
 const template = `
-  <vue-loaders-ball-beat color="red" scale="3"></vue-loaders-ball-beat>
+  <my-name name="ball-beat" color="red" scale="1"></my-name>
 `;
 
-new Vue({ 
+new Vue({
+  template
+}).$mount('#app');
+```
+
+```javascript
+import Vue from 'vue/dist/vue.esm.browser';
+import 'vue-loaders/dist/vue-loaders.css';
+import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat';
+
+Vue.component('my-name', VueLoadersBallBeat.component);
+
+const template = `
+  <my-name color="red" scale="1"></my-name>
+`;
+
+new Vue({
+  template
+}).$mount('#app');
+```
+
+```javascript
+import Vue from 'vue/dist/vue.esm.browser';
+import 'vue-loaders/dist/vue-loaders.css';
+import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat.js';
+
+const template = `
+  <vue-loaders-ball-beat color="red" scale="1"></vue-loaders-ball-beat>
+`;
+
+new Vue({
   components: {
     [VueLoadersBallBeat.component.name]: VueLoadersBallBeat.component
   },
   template
-});
+}).$mount('#app');
 ```
 
 ```HTML
@@ -107,6 +124,7 @@ new Vue({
   <body>
     <div id="app">
       <vue-loaders-ball-beat color="red" scale="2"></vue-loaders-ball-beat>
+      <hr/>
       <vue-loaders name="ball-beat" color="red" scale="2"></vue-loaders>
     </div>
     <script>
