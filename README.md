@@ -21,7 +21,7 @@ $ npm install -S vue-loaders
 
 ## Usage
 
-If you prefer `<vue-loaders name="{loader name}">` syntax take look for available [names](#loaders-names). If you prefer `<vue-loaders-{loader name}>` syntax go to this [list](#components).
+If you prefer `<vue-loaders name="{loader name}">` syntax take look for available [names](#loaders-names). If you prefer `<vue-loaders-{loader name}>` syntax go to [components list](#components).
 
 ```javascript
 import Vue from 'vue';
