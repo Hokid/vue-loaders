@@ -6,9 +6,6 @@
 <div align="center">
   <img src="vue-loaders.gif" alt="Preview" width="600" height="250" />
 </div>
-<div align="center">
-  <a href="http://hokid.github.com/vue-loaders?v=1">Sandbox</a>
-</div>
 
 ## NPM
 
