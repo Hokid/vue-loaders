@@ -1,123 +1,82 @@
-<title>VueLoaders demo</title>
-<script src="https://unpkg.com/vue"></script>
-<script src="./dist/VueLoaders.umd.js"></script>
-<link rel="stylesheet" href="./dist/VueLoaders.css">
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" type="text/css" href="dist/vue-loaders.css">
+</head>
+<body style="background: #ed5565; text-align: center; padding: 20px">
 <div id="app">
-  <ball-pulse-loader color="#000000"></ball-pulse-loader>
-  <hr>
-  <ball-pulse-loader color="#000000" size="20px"></ball-pulse-loader>
-  <hr>
-  <ball-grid-pulse-loader color="#000000"></ball-grid-pulse-loader>
-  <hr>
-  <ball-grid-pulse-loader color="#000000" size="40px"></ball-grid-pulse-loader>
-  <hr>
-  <ball-grid-beat-loader color="#000000"></ball-grid-beat-loader>
-  <hr>
-  <ball-grid-beat-loader color="#000000" size="40px"></ball-grid-beat-loader>
-  <hr>
-  <ball-clip-rotate-loader color="#000000"></ball-clip-rotate-loader>
-  <hr>
-  <ball-clip-rotate-loader color="#000000" size="40px"></ball-clip-rotate-loader>
-  <hr>
-  <ball-clip-rotate-pulse-loader color="#000000"></ball-clip-rotate-pulse-loader>
-  <hr>
-  <ball-clip-rotate-pulse-loader color="#000000" size="66px"></ball-clip-rotate-pulse-loader>
-  <hr>
-  <square-spin-loader color="#000000"></square-spin-loader>
-  <hr>
-  <square-spin-loader color="#000000" size="100px"></square-spin-loader>
-  <hr>
-  <ball-clip-rotate-multiple-loader color="#000000"></ball-clip-rotate-multiple-loader>
-  <hr>
-  <ball-clip-rotate-multiple-loader color="#000000" size="63px"></ball-clip-rotate-multiple-loader>
-  <hr>
-  <ball-pulse-rise-loader color="#000000"></ball-pulse-rise-loader>
-  <hr>
-  <ball-pulse-rise-loader color="#000000" size="30px"></ball-pulse-rise-loader>
-  <hr>
-  <ball-rotate-loader color="#000000"></ball-rotate-loader>
-  <hr>
-  <ball-rotate-loader color="#000000" size="30px"></ball-rotate-loader>
-  <hr>
-  <cube-transition-loader color="#000000"></cube-transition-loader>
-  <hr>
-  <cube-transition-loader color="#000000" size="30px"></cube-transition-loader>
-  <hr>
-  <ball-zig-zag-loader color="#000000"></ball-zig-zag-loader>
-  <hr>
-  <ball-zig-zag-loader color="#000000" size="30px"></ball-zig-zag-loader>
-  <hr>
-  <ball-zig-zag-deflect-loader color="#000000"></ball-zig-zag-deflect-loader>
-  <hr>
-  <ball-zig-zag-deflect-loader color="#000000" size="30px"></ball-zig-zag-deflect-loader>
-  <hr>
-  <ball-triangle-path-loader color="#000000"></ball-triangle-path-loader>
-  <hr>
-  <ball-triangle-path-loader color="#000000" size="20px"></ball-triangle-path-loader>
-  <hr>
-  <ball-scale-loader color="#000000"></ball-scale-loader>
-  <hr>
-  <ball-scale-loader color="#000000" size="90px"></ball-scale-loader>
-  <hr>
-  <ball-scale-ripple-loader color="#000000"></ball-scale-ripple-loader>
-  <hr>
-  <ball-scale-ripple-loader color="#000000" size="90px"></ball-scale-ripple-loader>
-  <hr>
-  <ball-scale-ripple-multiple-loader color="#000000"></ball-scale-ripple-multiple-loader>
-  <hr>
-  <ball-scale-ripple-multiple-loader color="#000000" size="90px"></ball-scale-ripple-multiple-loader>
-  <hr>
-  <ball-spin-fade-loader color="#000000"></ball-spin-fade-loader>
-  <hr>
-  <ball-spin-fade-loader color="#000000" size="30px"></ball-spin-fade-loader>
-  <hr>
-  <line-spin-fade-loader color="#000000"></line-spin-fade-loader>
-  <hr>
-  <line-spin-fade-loader color="#000000" size="30px"></line-spin-fade-loader>
-  <hr>
-  <line-scale-loader color="#000000"></line-scale-loader>
-  <hr>
-  <line-scale-loader color="#000000" size="90px"></line-scale-loader>
-  <hr>
-  <line-scale-party-loader color="#000000"></line-scale-party-loader>
-  <hr>
-  <line-scale-party-loader color="#000000" size="90px"></line-scale-party-loader>
-  <hr>
-  <line-scale-pulse-out-loader color="#000000"></line-scale-pulse-out-loader>
-  <hr>
-  <line-scale-pulse-out-loader color="#000000" size="90px"></line-scale-pulse-out-loader>
-  <hr>
-  <line-scale-pulse-out-rapid-loader color="#000000"></line-scale-pulse-out-rapid-loader>
-  <hr>
-  <line-scale-pulse-out-rapid-loader color="#000000" size="90px"></line-scale-pulse-out-rapid-loader>
-  <hr>
-  <ball-scale-multiple-loader color="#000000"></ball-scale-multiple-loader>
-  <hr>
-  <ball-scale-multiple-loader color="#000000" size="90px"></ball-scale-multiple-loader>
-  <hr>
-  <ball-pulse-sync-loader color="#000000"></ball-pulse-sync-loader>
-  <hr>
-  <ball-pulse-sync-loader color="#000000" size="40px"></ball-pulse-sync-loader>
-  <hr>
-  <ball-beat-loader color="#000000"></ball-beat-loader>
-  <hr>
-  <ball-beat-loader color="#000000" size="40px"></ball-beat-loader>
-  <hr>
-  <triangle-skew-spin-loader color="#000000"></triangle-skew-spin-loader>
-  <hr>
-  <triangle-skew-spin-loader color="#000000" size="60px"></triangle-skew-spin-loader>
-  <hr>
-  <pacman-loader color="#000000"></pacman-loader>
-  <hr>
-  <pacman-loader color="#000000" size="200px"></pacman-loader>
-  <hr>
-  <semi-circle-spin-loader color="#000000"></semi-circle-spin-loader>
-  <hr>
-  <semi-circle-spin-loader color="#000000" size="60px"></semi-circle-spin-loader>
+  <vue-loaders-ball-beat color="black" scale="1"></vue-loaders-ball-beat>
+  <hr/>
+  <vue-loaders name="ball-beat" color="black" scale="2"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-grid-beat" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-pulse-sync" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-scale-ripple" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-zig-zag-deflect" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="line-scale" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="line-spin-fade-loader" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="triangle-skew-spin" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-clip-rotate" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-grid-pulse" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-rotate" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-scale-ripple-multiple" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-zig-zag" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="line-scale-party" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="pacman" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-clip-rotate-multiple" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-pulse" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-scale" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-spin-fade-loader" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="cube-transition" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="line-scale-pulse-out" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="semi-circle-spin" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-clip-rotate-pulse" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-pulse-rise" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-scale-multiple" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="ball-triangle-path" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="line-scale-pulse-out-rapid" color="black"></vue-loaders>
+  <hr/>
+  <vue-loaders name="square-spin" color="black"></vue-loaders>
+  <hr/>
 </div>
 
+<script src="dist/vue-loaders.umd.js"></script>
+<script src="dist/loaders/ball-beat.js"></script>
 <script>
 Vue.use(VueLoaders);
+// Vue.use(VueLoadersBallBeat);
 new Vue().$mount('#app')
 </script>
+</body>
+</html>
+

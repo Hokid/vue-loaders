@@ -1,30 +1,47 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
-import vue from 'rollup-plugin-vue';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
+import fs from 'fs';
+import {getLoaderName} from './src/core';
 import pkg from './package.json';
 
+const loadersList = fs.readdirSync('./src/loaders/');
+
+function createBundleOptionsForLoaders(loaders) {
+  return loaders.map(fileName => ({
+    input: `src/loaders/${fileName}`,
+    output: {
+      name: getLoaderName(fileName),
+      file: `./dist/loaders/${fileName}`,
+      format: 'umd'
+    },
+    plugins: [
+      resolve(),
+      commonjs(),
+      babel({
+        exclude: ['node_modules/**'],
+        runtimeHelpers: true
+      }),
+    ]
+  }));
+}
 
 export default [
-  // browser-friendly UMD build
   {
     input: 'src/index.js',
     output: {
       name: 'VueLoaders',
       file: pkg.main,
       format: 'umd',
-      exports: 'named'
+      exports: 'default'
     },
     plugins: [
       resolve(),
       commonjs(),
-      vue({
-        autoStyles: false, styleToImports: true
-      }),
       postcss({
         inject: false,
         extract: pkg.style,
@@ -37,19 +54,11 @@ export default [
         exclude: ['node_modules/**'],
         runtimeHelpers: true
       }),
-      uglify()
+      // uglify()
     ]
   },
-
-  // CommonJS (for Node) and ES module (for bundlers) build.
-  // (We could have three entries in the configuration array
-  // instead of two, but it's quicker to generate multiple
-  // builds from a single configuration where possible, using
-  // an array for the `output` option, where we can specify
-  // `file` and `format` for each target)
   {
     input: 'src/index.js',
-    external: ['ms'],
     output: [
       {file: pkg.module, format: 'es'}
     ],
@@ -59,14 +68,7 @@ export default [
       postcss({
         inject: false,
         extract: false
-      }),
-      vue({
-        css: false
-      }),
-      babel({
-        exclude: ['node_modules/**'],
-        runtimeHelpers: true
       })
     ]
   }
-];
+].concat(createBundleOptionsForLoaders(loadersList));
