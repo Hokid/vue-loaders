@@ -227,14 +227,14 @@ vue-loaders-triangle-skew-spin
 
 ## Props
 
-`vue-loaders` component supports for following props:
+`vue-loaders` component support the following props:
 
  * `name` - name of loader(see [names](#loaders-names)).
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
  
 
-`vue-loaders-{loader name}` components(see [components](#components)) supports for following props:
+`vue-loaders-{loader name}` components(see [components](#components)) support the following props:
 
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
