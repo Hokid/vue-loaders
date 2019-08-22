@@ -26,11 +26,11 @@ $ npm install -S vue-loaders
 
 ## Usage
 
-If you prefer `<vue-loaders name="{loader name}">` syntax take look for available [names](#loaders-names). 
+Take a look at available [names](#loaders-names) if you prefer `<vue-loaders name="{loader name}">` syntax. 
 
-If you prefer `<vue-loaders-{loader name}>` syntax go to [components list](#components). 
+Take a look at available [components list](#components) if you prefer `<vue-loaders-{loader name}>` syntax. 
 
-For avaliable props see [props](#props).
+For available props see [props](#props).
 
 ```javascript
 import Vue from 'vue/dist/vue.esm.browser';
@@ -116,6 +116,26 @@ new Vue({
   template
 }).$mount('#app');
 ```
+
+If you want setting a loader color in your styles, see example below:
+```javascript
+import Vue from 'vue/dist/vue.esm.browser';
+import 'vue-loaders/dist/vue-loaders.css';
+import VueLoaders from 'vue-loaders';
+
+Vue.use(VueLoaders);
+
+const template = `
+<div style="color: red;">
+  <vue-loaders-ball-beat color="currentColor" scale="1"></vue-loaders-ball-beat>
+</div>
+`;
+
+new Vue({
+  template
+}).$mount('#app');
+```
+[live example](https://codepen.io/Hokid/pen/xoaZew)
 
 ```HTML
 <!DOCTYPE html>
@@ -207,14 +227,14 @@ vue-loaders-triangle-skew-spin
 
 ## Props
 
-`vue-loaders` component have following props:
+`vue-loaders` component supports for following props:
 
  * `name` - name of loader(see [names](#loaders-names)).
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
  
 
-`vue-loaders-{loader name}` component(see [components](#components)) have following props:
+`vue-loaders-{loader name}` components(see [components](#components)) supports for following props:
 
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
