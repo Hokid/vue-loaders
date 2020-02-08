@@ -6,8 +6,7 @@
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist/ && rollup -c",
-    "lint": "vue-cli-service lint"
+    "build": "rm -rf dist/ && rollup -c"
   },
   "files": [
     "dist/",
@@ -49,33 +48,21 @@
     "plugin"
   ],
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@vue/cli-plugin-babel": "^3.0.0-beta.1",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.1",
-    "@vue/cli-service": "^3.3.0",
-    "autoprefixer": "^8.1.0",
-    "loaders.css": "^0.1.2",
-    "postcss-csso": "^3.0.0",
-    "rollup": "^1.1.0",
-    "rollup-plugin-babel": "^4.3.0",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-postcss": "^1.6.3",
-    "rollup-plugin-uglify": "^6.0.1",
-    "rollup-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.13"
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "7.8.4",
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "7.1.1",
+    "autoprefixer": "8.6.5",
+    "loaders.css": "0.1.2",
+    "postcss-csso": "3.0.0",
+    "rollup": "1.31.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-postcss": "2.0.6",
+    "rollup-plugin-uglify": "6.0.4"
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
-    ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
     ]
   },
   "browserslist": [
