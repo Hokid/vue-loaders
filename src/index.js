@@ -28,6 +28,12 @@ const component = {
       return loader.component.render.call(context, createElement);
     }
 
+    console.warn(
+      'Unsupported loader name '
+      + '"' + this.name + '".'
+      + 'See https://github.com/Hokid/vue-loaders#loaders-names'
+    );
+
     return null;
   }
 };
