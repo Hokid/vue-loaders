@@ -1,6 +1,7 @@
 .vue-loaders {
   display: inline-block;
   box-sizing: content-box;
+  font-size: 0;
 }
 
 .vue-loaders *,
