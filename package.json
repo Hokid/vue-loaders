@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist/ && rollup -c",
-    "github-releaser": "conventional-github-releaser -p angular -d -t=$1"
+    "github-releaser": "conventional-github-releaser -p angular -d -t $1"
   },
   "files": [
     "dist/",
