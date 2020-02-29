@@ -27,16 +27,18 @@
 
 .vue-loaders.ball-clip-rotate-pulse {
   transform: none;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
 }
 
 .vue-loaders.ball-clip-rotate-pulse > div:first-child {
-  left: 7px;
+  left: 9px;
+  top: 9px;
 }
 
 .vue-loaders.ball-clip-rotate-pulse > div:last-child {
-  left: -2px;
+  left: 0;
+  top: 0;
 }
 
 .vue-loaders.ball-grid-pulse:before,
