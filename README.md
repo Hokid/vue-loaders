@@ -5,11 +5,11 @@
 <h1 align="center">vue loaders</h1>
 
 <div align="center">
-  <a href="https://github.com/ConnorAtherton/loaders.css">loaders.css</a> + vue
+    <a href="https://www.npmjs.com/package/vue-loaders"><img src="https://img.shields.io/npm/v/vue-loaders.svg" alt="Version" /></a>
 </div>
 
 <div align="center">
-    <a href="https://www.npmjs.com/package/vue-loaders"><img src="https://img.shields.io/npm/v/vue-loaders.svg" alt="Version" /></a>
+  <a href="https://github.com/ConnorAtherton/loaders.css">loaders.css</a> + vue
 </div>
 
 [< previous version](https://github.com/Hokid/vue-loaders/tree/34e07c7c88e602423e497427e9f322692bd336d4)
