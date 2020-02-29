@@ -203,3 +203,7 @@
 .vue-loaders.square-spin > div {
   border: 0;
 }
+
+.vue-loaders.triangle-skew-spin {
+  padding: 3px 2px;
+}
