@@ -54,6 +54,12 @@
   padding-bottom: 30px;
 }
 
+
+.vue-loaders.ball-pulse-sync {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .vue-loaders.ball-rotate > div:before,
 .vue-loaders.ball-rotate > div:after {
   display: none;
