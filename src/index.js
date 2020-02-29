@@ -31,7 +31,7 @@ const component = {
     console.warn(
       'Unsupported loader name '
       + '"' + this.name + '".'
-      + 'See https://github.com/Hokid/vue-loaders#loaders-names'
+      + 'See https://github.com/Hokid/vue-loaders#loaders'
     );
 
     return null;
