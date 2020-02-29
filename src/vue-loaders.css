@@ -196,6 +196,10 @@
   margin: 0;
 }
 
+.vue-loaders.square-spin {
+  padding: 9px;
+}
+
 .vue-loaders.square-spin > div {
   border: 0;
 }
