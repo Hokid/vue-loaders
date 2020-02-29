@@ -1,11 +1,13 @@
+<div align="center">
+    <img src="assets/gifs/pacman.gif" alt="vue-loaders" />
+</div>
+
 <h1 align="center">vue loaders</h1>
 
 <div align="center">
-  Based on <a href="https://github.com/ConnorAtherton/loaders.css">loaders.css</a>
+  <a href="https://github.com/ConnorAtherton/loaders.css">loaders.css</a> + vue
 </div>
-<div align="center">
-  <img src="vue-loaders.gif" alt="Preview" width="600" height="250" />
-</div>
+
 <div align="center">
     <a href="https://www.npmjs.com/package/vue-loaders"><img src="https://img.shields.io/npm/v/vue-loaders.svg" alt="Version" /></a>
 </div>
@@ -22,13 +24,13 @@ $ npm install -S vue-loaders
 
 * umd: https://unpkg.com/vue-loaders/dist/vue-loaders.umd.js
 * esm/mjs: https://unpkg.com/vue-loaders/dist/vue-loaders.esm.js
-* umd: `https://unpkg.com/vue-loaders/dist/loaders/`[loader name](#loaders-names)`.js`
+* umd: `https://unpkg.com/vue-loaders/dist/loaders/`[loader name](#loaders)`.js`
 
 ## Usage
 
-Take a look at available [names](#loaders-names) if you prefer `<vue-loaders name="{loader name}">` syntax. 
+Take a look at available [names](#loaders) if you prefer `<vue-loaders name="{loader name}">` syntax. 
 
-Take a look at available [components list](#components) if you prefer `<vue-loaders-{loader name}>` syntax. 
+Take a look at available [components list](#loaders) if you prefer `<vue-loaders-{loader name}>` syntax. 
 
 For available props see [props](#props).
 
@@ -160,81 +162,49 @@ new Vue({
 </html>
 ```
 
-## Loaders names
+## Loaders
 
-```
-ball-beat
-ball-clip-rotate-multiple
-ball-clip-rotate-pulse
-ball-clip-rotate
-ball-grid-beat
-ball-grid-pulse
-ball-pulse-rise
-ball-pulse-sync
-ball-pulse
-ball-rotate
-ball-scale-multiple
-ball-scale-ripple-multiple
-ball-scale-ripple
-ball-scale
-ball-spin-fade-loader
-ball-triangle-path
-ball-zig-zag-deflect
-ball-zig-zag
-cube-transition
-line-scale-party
-line-scale-pulse-out-rapid
-line-scale-pulse-out
-line-scale
-line-spin-fade-loader
-pacman
-semi-circle-spin
-square-spin
-```
-
-## Components
-
-```
-vue-loaders-ball-beat
-vue-loaders-ball-clip-rotate-multiple
-vue-loaders-ball-clip-rotate-pulse
-vue-loaders-ball-clip-rotate
-vue-loaders-ball-grid-beat
-vue-loaders-ball-grid-pulse
-vue-loaders-ball-pulse-rise
-vue-loaders-ball-pulse-sync
-vue-loaders-ball-pulse
-vue-loaders-ball-rotate
-vue-loaders-ball-scale-multiple
-vue-loaders-ball-scale-ripple-multiple
-vue-loaders-ball-scale-ripple
-vue-loaders-ball-scale
-vue-loaders-ball-spin-fade-loader
-vue-loaders-ball-triangle-path
-vue-loaders-ball-zig-zag-deflect
-vue-loaders-ball-zig-zag
-vue-loaders-cube-transition
-vue-loaders-line-scale-party
-vue-loaders-line-scale-pulse-out-rapid
-vue-loaders-line-scale-pulse-out
-vue-loaders-line-scale
-vue-loaders-line-spin-fade-loader
-vue-loaders-pacman
-vue-loaders-semi-circle-spin
-vue-loaders-square-spin
-vue-loaders-triangle-skew-spin
-```
+|Preview|Name|Component|
+:-:|-|-|
+|![ball-beat](assets/gifs/ball-beat.gif)|ball-beat|`<vue-loaders-ball-beat/>`|
+|![ball-clip-rotate-multiple](assets/gifs/ball-clip-rotate-multiple.gif)|ball-clip-rotate-multiple|`<vue-loaders-ball-clip-rotate-multiple/>`|
+|![ball-clip-rotate-pulse](assets/gifs/ball-clip-rotate-pulse.gif)|ball-clip-rotate-pulse|`<vue-loaders-ball-clip-rotate-pulse/>`|
+|![ball-clip-rotate](assets/gifs/ball-clip-rotate.gif)|ball-clip-rotate|`<vue-loaders-ball-clip-rotate/>`|
+|![ball-grid-beat](assets/gifs/ball-grid-beat.gif)|ball-grid-beat|`<vue-loaders-ball-grid-beat/>`|
+|![ball-grid-pulse](assets/gifs/ball-grid-pulse.gif)|ball-grid-pulse|`<vue-loaders-ball-grid-pulse/>`|
+|![ball-pulse-rise](assets/gifs/ball-pulse-rise.gif)|ball-pulse-rise|`<vue-loaders-ball-pulse-rise/>`|
+|![ball-pulse-sync](assets/gifs/ball-pulse-sync.gif)|ball-pulse-sync|`<vue-loaders-ball-pulse-sync/>`|
+|![ball-pulse](assets/gifs/ball-pulse.gif)|ball-pulse|`<vue-loaders-ball-pulse/>`|
+|![ball-rotate](assets/gifs/ball-rotate.gif)|ball-rotate|`<vue-loaders-ball-rotate/>`|
+|![ball-scale-multiple](assets/gifs/ball-scale-multiple.gif)|ball-scale-multiple|`<vue-loaders-ball-scale-multiple/>`|
+|![ball-scale-ripple-multiple](assets/gifs/ball-scale-ripple-multiple.gif)|ball-scale-ripple-multiple|`<vue-loaders-ball-scale-ripple-multiple/>`|
+|![ball-scale-ripple](assets/gifs/ball-scale-ripple.gif)|ball-scale-ripple|`<vue-loaders-ball-scale-ripple/>`|
+|![ball-scale](assets/gifs/ball-scale.gif)|ball-scale|`<vue-loaders-ball-scale/>`|
+|![ball-spin-fade-loader](assets/gifs/ball-spin-fade-loader.gif)|ball-spin-fade-loader|`<vue-loaders-ball-spin-fade-loader/>`|
+|![ball-triangle-path](assets/gifs/ball-triangle-path.gif)|ball-triangle-path|`<vue-loaders-ball-triangle-path/>`|
+|![ball-zig-zag-deflect](assets/gifs/ball-zig-zag-deflect.gif)|ball-zig-zag-deflect|`<vue-loaders-ball-zig-zag-deflect/>`|
+|![ball-zig-zag](assets/gifs/ball-zig-zag.gif)|ball-zig-zag|`<vue-loaders-ball-zig-zag/>`|
+|![cube-transition](assets/gifs/cube-transition.gif)|cube-transition|`<vue-loaders-cube-transition/>`|
+|![line-scale-party](assets/gifs/line-scale-party.gif)|line-scale-party|`<vue-loaders-line-scale-party/>`|
+|![line-scale-pulse-out-rapid](assets/gifs/line-scale-pulse-out-rapid.gif)|line-scale-pulse-out-rapid|`<vue-loaders-line-scale-pulse-out-rapid/>`|
+|![line-scale-pulse-out](assets/gifs/line-scale-pulse-out.gif)|line-scale-pulse-out|`<vue-loaders-line-scale-pulse-out/>`|
+|![line-scale](assets/gifs/line-scale.gif)|line-scale|`<vue-loaders-line-scale/>`|
+|![line-spin-fade-loader](assets/gifs/line-spin-fade-loader.gif)|line-spin-fade-loader|`<vue-loaders-line-spin-fade-loader/>`|
+|![pacman](assets/gifs/pacman.gif)|pacman|`<vue-loaders-pacman/>`|
+|![semi-circle-spin](assets/gifs/semi-circle-spin.gif)|semi-circle-spin|`<vue-loaders-semi-circle-spin/>`|
+|![square-spin](assets/gifs/square-spin.gif)|square-spin|`<vue-loaders-square-spin/>`|
+|![triangle-skew-spin](assets/gifs/triangle-skew-spin.gif)|triangle-skew-spin|`<vue-loaders-triangle-skew-spin/>`|
 
 ## Props
 
 `vue-loaders` component support the following props:
 
- * `name` - name of loader(see [names](#loaders-names)).
+ * `name` - name of loader(see [names](#loaders)).
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
  
 
-`vue-loaders-{loader name}` components(see [components](#components)) support the following props:
+`vue-loaders-{loader name}` components(see [components](#loaders)) support the following props:
 
  * `color` - loader color. May be any [css color value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
  * `scale` - loader scale. May be any [scale number](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
