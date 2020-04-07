@@ -18,8 +18,12 @@ function createBundleOptionsForLoaders(loaders) {
       name: getLoaderName(fileName),
       file: `./dist/loaders/${fileName}`,
       format: 'umd',
-      esModule: true
+      esModule: true,
+      globals: {
+        'vue': 'Vue'
+      },
     },
+    external: ['vue'],
     plugins: [
       resolve(),
       commonjs(),
@@ -40,8 +44,12 @@ export default [
       file: pkg.main,
       format: 'umd',
       exports: 'default',
-      esModule: true
+      esModule: true,
+      globals: {
+        'vue': 'Vue'
+      },
     },
+    external: ['vue'],
     plugins: [
       resolve(),
       commonjs(),
@@ -65,6 +73,7 @@ export default [
     output: [
       {file: pkg.module, format: 'es'}
     ],
+    external: ['vue'],
     plugins: [
       resolve(),
       commonjs(),

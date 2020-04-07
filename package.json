@@ -60,7 +60,11 @@
     "rollup": "1.31.0",
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-postcss": "2.0.6",
-    "rollup-plugin-uglify": "6.0.4"
+    "rollup-plugin-uglify": "6.0.4",
+    "vue": "3.0.0-alpha.11"
+  },
+  "peerDependencies": {
+    "vue": "2.x.x||3.x.x||>=3.0.0-alpha||>=3.0.0-beta||>=3.0.0-rc"
   },
   "babel": {
     "presets": [

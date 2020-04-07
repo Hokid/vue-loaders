@@ -67,14 +67,34 @@
   <hr/>
   <vue-loaders name="square-spin" color="black"></vue-loaders>
   <hr/>
+  <ball-beat color="black"></ball-beat>
+  <hr/>
 </div>
 
-<script src="dist/vue-loaders.umd.js"></script>
-<script src="dist/loaders/ball-beat.js"></script>
+<script src="./dist/vue-loaders.umd.js"></script>
+<script src="./dist/loaders/ball-beat.js"></script>
 <script>
-Vue.use(VueLoaders);
-// Vue.use(VueLoadersBallBeat);
-new Vue().$mount('#app')
+function v2() {
+  Vue.use(VueLoaders);
+  Vue.component('ball-beat', VueLoadersBallBeat.component);
+  new Vue().$mount('#app')
+}
+
+function v3() {
+  const app = Vue.createApp({
+    components: {
+      BallBeat: VueLoadersBallBeat.component
+    }
+  });
+
+  app.use(VueLoaders);
+  app.mount('#app')
+}
+
+const bootstrap = /3\./.test(Vue.version) ? v3 : v2;
+
+bootstrap();
+
 </script>
 </body>
 </html>

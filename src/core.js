@@ -1,3 +1,19 @@
+import * as ImportedVue from 'vue';
+
+let Vue = ImportedVue;
+
+export function setVue(vue) {
+  Vue = vue;
+}
+
+function shouldUseGlobalCreateElement() {
+  if (Vue && Vue.version && /^[3-9]\./.test(Vue.version)) {
+    return true;
+  }
+
+  return false;
+}
+
 export function getLoaderName(fileName) {
   return 'VueLoaders' + fileName
     .replace(/\..+/, '')
@@ -21,7 +37,8 @@ export function createLoaderComponent(mixin) {
   }, mixin, {name});
   return {
     originName,
-    component,
+    setVue,
+    component: useCreateElementResolver(component),
     install(Vue) {
       Vue.component(name, this.component);
     }
@@ -73,6 +90,23 @@ export function createChild(createElement, color, colorPropsOrChildren = 'backgr
     },
     children
   );
+}
+
+export function useCreateElementResolver(component) {
+  if (typeof component.render === 'function') {
+    if (shouldUseGlobalCreateElement()) {
+      const origin = component.render;
+      component.render = function() {
+        const argsArray = Array.prototype.slice.call(arguments);
+        const args = typeof argsArray[0] === 'function'
+          ? argsArray
+          : [Vue.h].concat(argsArray);
+        return origin.apply(this, args);
+      };
+    }
+  }
+
+  return component;
 }
 
 export class Loaders {

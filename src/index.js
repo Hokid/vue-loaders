@@ -1,8 +1,9 @@
 import 'loaders.css';
 import './vue-loaders.css';
+import {setVue, useCreateElementResolver} from './core';
 import loadersContainer from './loadersContainer';
 
-const component = {
+const component = useCreateElementResolver({
   props: {
     name: {
       type: String,
@@ -36,9 +37,10 @@ const component = {
 
     return null;
   }
-};
+});
 
 export default {
+  setVue,
   component,
   install(Vue) {
     Vue.component('vue-loaders', component);
