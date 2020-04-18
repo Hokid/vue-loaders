@@ -3,5 +3,5 @@ import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
 export default createSingleLoaderComponent({
   name: 'line-scale-party',
-  children: 5
+  children: 4
 });
