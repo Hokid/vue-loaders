@@ -11,6 +11,8 @@
 <body style="text-align: center; padding: 20px">
 <div id="app">
   <vue-loaders name="unsupported-name" color="black"></vue-loaders>
+  <vue-loaders-ball-beat color="black"></vue-loaders-ball-beat>
+  <hr/>
   <vue-loaders name="ball-beat" color="black"></vue-loaders>
   <hr/>
   <vue-loaders name="ball-grid-beat" color="black"></vue-loaders>
@@ -69,11 +71,11 @@
   <hr/>
 </div>
 
-<script src="dist/vue-loaders.umd.js"></script>
-<script src="dist/loaders/ball-beat.js"></script>
+<script src="./dist/vue-loaders.umd.js"></script>
+<script src="./dist/loaders/ball-beat.js"></script>
 <script>
 Vue.use(VueLoaders);
-// Vue.use(VueLoadersBallBeat);
+Vue.use(VueLoadersBallBeat);
 new Vue().$mount('#app')
 </script>
 </body>

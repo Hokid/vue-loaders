@@ -1,13 +1,9 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'ball-clip-rotate-pulse';
-
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color),
-      createChild(createElement, this.color, ['border-top-color', 'border-bottom-color'])
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-clip-rotate-pulse',
+  children: [
+    {count: 1},
+    {count: 1, color: ['border-top-color', 'border-bottom-color']}
+  ]
 });

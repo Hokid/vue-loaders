@@ -1,12 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'ball-scale';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-scale',
+  children: 1
 });

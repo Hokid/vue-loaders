@@ -1,12 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'square-spin';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'square-spin',
+  children: 1
 });

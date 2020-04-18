@@ -1,14 +1,9 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'ball-triangle-path';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color, 'border-color'),
-      createChild(createElement, this.color, 'border-color'),
-      createChild(createElement, this.color, 'border-color')
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-triangle-path',
+  children: [
+    {count: 3, color: 'border-color'}
+  ]
 });

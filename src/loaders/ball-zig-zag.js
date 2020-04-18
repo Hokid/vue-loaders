@@ -1,13 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'ball-zig-zag';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color),
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-zig-zag',
+  children: 2
 });

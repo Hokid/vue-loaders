@@ -6,7 +6,7 @@ import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import fs from 'fs';
-import {getLoaderName} from './src/core';
+import {formatLoaderName} from './src/singleLoaderComponent';
 import pkg from './package.json';
 
 const loadersList = fs.readdirSync('./src/loaders/');
@@ -15,7 +15,7 @@ function createBundleOptionsForLoaders(loaders) {
   return loaders.map(fileName => ({
     input: `src/loaders/${fileName}`,
     output: {
-      name: getLoaderName(fileName),
+      name: formatLoaderName(fileName),
       file: `./dist/loaders/${fileName}`,
       format: 'umd',
       esModule: true

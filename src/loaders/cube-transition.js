@@ -1,13 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'cube-transition';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color),
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'cube-transition',
+  children: 2
 });

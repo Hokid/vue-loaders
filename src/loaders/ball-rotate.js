@@ -1,15 +1,9 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../singleLoaderComponent';
 
-const loaderName = 'ball-rotate';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color, [
-        createChild(createElement, this.color),
-        createChild(createElement, this.color)
-      ])
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-rotate',
+  children: [
+    {count: 1, children: 2}
+  ]
 });

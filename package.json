@@ -11,9 +11,6 @@
   },
   "files": [
     "dist/",
-    "src/",
-    "demo.html",
-    "vue-loaders.gif",
     "README.md",
     "LICENSE.md"
   ],
