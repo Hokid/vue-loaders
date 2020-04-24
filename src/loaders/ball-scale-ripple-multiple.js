@@ -1,14 +1,9 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../componentApi';
 
-const loaderName = 'ball-scale-ripple-multiple';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color, 'border-color'),
-      createChild(createElement, this.color, 'border-color'),
-      createChild(createElement, this.color, 'border-color')
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-scale-ripple-multiple',
+  children: [
+    {count: 3, color: 'border-color'}
+  ]
 });

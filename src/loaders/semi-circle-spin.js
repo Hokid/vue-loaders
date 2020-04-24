@@ -1,19 +1,16 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../componentApi';
 
-const loaderName = 'semi-circle-spin';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createElement(
-        'div',
-        {
-          style: {
-            backgroundImage: `linear-gradient(transparent 0,transparent 70%, ${this.color} 30%, ${this.color} 100%)`
-          }
-        }
-      )
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'semi-circle-spin',
+  children: [
+    {
+      count: 1,
+      color(color) {
+        return {
+          backgroundImage: `linear-gradient(transparent 0,transparent 70%, ${color} 30%, ${color} 100%)`
+        };
+      }
+    }
+  ]
 });

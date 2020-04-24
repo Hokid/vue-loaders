@@ -1,16 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../componentApi';
 
-const loaderName = 'ball-pulse-rise';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-pulse-rise',
+  children: 5
 });

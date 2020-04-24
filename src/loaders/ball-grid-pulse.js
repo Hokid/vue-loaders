@@ -1,20 +1,7 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../componentApi';
 
-const loaderName = 'ball-grid-pulse';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'ball-grid-pulse',
+  children: 9
 });

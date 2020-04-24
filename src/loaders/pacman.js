@@ -1,16 +1,10 @@
-import {createLoaderComponent, createRoot, createChild} from '../core';
+import {createSingleLoaderComponent} from '../componentApi';
 
-const loaderName = 'pacman';
 
-export default createLoaderComponent({
-  name: loaderName,
-  render(createElement) {
-    return createRoot(createElement, loaderName, this.scale, [
-      createChild(createElement, this.color, ['border-top-color', 'border-left-color', 'border-bottom-color']),
-      createChild(createElement, this.color, ['border-top-color', 'border-left-color', 'border-bottom-color']),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color),
-      createChild(createElement, this.color)
-    ]);
-  }
+export default createSingleLoaderComponent({
+  name: 'pacman',
+  children: [
+    {count: 2, color: ['border-top-color', 'border-left-color', 'border-bottom-color']},
+    {count: 3}
+  ]
 });
