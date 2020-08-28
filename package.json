@@ -4,13 +4,15 @@
   "homepage": "https://github.com/Hokid/vue-loaders",
   "description": "Vue component wrappers for loaders.css (https://github.com/ConnorAtherton/loaders.css)",
   "author": "Kirill Khoroshilov <mr.hokid@gmail.com>",
+  "types": "types/vue-loaders.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist/ && rollup -c",
+    "build": "node scripts/build.js",
     "github-releaser": "conventional-github-releaser -p angular -d -t $1"
   },
   "files": [
     "dist/",
+    "types/",
     "README.md",
     "LICENSE.md"
   ],
