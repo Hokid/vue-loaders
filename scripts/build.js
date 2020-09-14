@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const babel = require('rollup-plugin-babel');
 const postcss = require('rollup-plugin-postcss');
-const {uglify} = require('rollup-plugin-uglify');
+const {terser} = require('rollup-plugin-terser');
 const pkg = require('../package.json');
 
 main()
@@ -55,7 +55,7 @@ async function main() {
           exclude: ['node_modules/**'],
           runtimeHelpers: true
         }),
-        uglify()
+        terser()
       ]
     }).then(_ => _.write({
       name: 'VueLoaders',
@@ -79,7 +79,8 @@ async function main() {
         postcss({
           inject: false,
           extract: false
-        })
+        }),
+        terser()
       ]
     }).then(_ => _.write({
       file: pkg.module,
@@ -111,7 +112,7 @@ function createBundleGeneratorForEachLoader(loaders) {
         exclude: ['node_modules/**'],
         runtimeHelpers: true
       }),
-      uglify()
+      terser()
     ]
   }).then(_ => _.write({
     name: formatLoaderName(fileName),
