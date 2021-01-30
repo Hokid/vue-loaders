@@ -98,6 +98,10 @@ async function main() {
     ...createTypesGeneratorForEachLoader(loadersList)
   );
 
+  requests.push(
+    createWebTypes(loadersList)
+  );
+
   await Promise.all(requests);
 }
 
@@ -115,7 +119,7 @@ function createBundleGeneratorForEachLoader(loaders) {
       terser()
     ]
   }).then(_ => _.write({
-    name: formatLoaderName(fileName),
+    name: formatUMDName(fileName),
     file: `./dist/loaders/${fileName}`,
     format: 'umd',
     esModule: true,
@@ -137,9 +141,138 @@ function createTypesGeneratorForEachLoader(loaders) {
   ))
 }
 
-function formatLoaderName(fileName) {
+function createWebTypes(loaders) {
+  const colorAttr = createWebTypesAttr(
+    'color',
+    'Set color. Accepted any CSS color value.',
+    {
+      kind: 'expression',
+      type: 'string'
+    },
+    false,
+    '"#ffffff"'
+  );
+
+  const scaleAttr = createWebTypesAttr(
+    'scale',
+    'Set scale. Accepted any CSS number value.',
+    {
+      kind: 'expression',
+      type: [
+        'string',
+        'number'
+      ]
+    },
+    false
+  );
+
+  const mainLoaderNameAttr = createWebTypesAttr(
+    'name',
+    'Set loader name to show.\n\nAvailable names:\n' + loaders.map(_ => ' - ' + formatNameForSingleComponent(_)).join('\n'),
+    {
+      kind: 'expression',
+      type: 'string'
+    },
+    true
+  );
+
+  const webTypesContent = {
+    $schema: "http://json.schemastore.org/web-types",
+    framework: "vue",
+    name: pkg.name,
+    version: pkg.version,
+    contributions: {
+      html: {
+        'types-syntax': 'typescript',
+        tags: [
+          createWebTypesTag(
+            'vue-loaders',
+            'Single component for all of the loaders. Use `name` attribute to specify loader.',
+            {
+              module: 'vue-loaders',
+              symbol: 'default'
+            },
+            [
+              mainLoaderNameAttr,
+              colorAttr,
+              scaleAttr
+            ]
+          )
+        ].concat(
+          loaders.map(_ =>
+            createWebTypesTag(
+              formatTagName(_),
+              formatName(_) + ' loader component',
+              {
+                module: `vue-loaders/dist/${_}`,
+                symbol: 'default'
+              },
+              [
+                colorAttr,
+                scaleAttr
+              ]
+            )
+          )
+        )
+      }
+    }
+  };
+
+  return fs.promises.writeFile(
+    path.join(__dirname, '../dist/web-types.json'),
+    JSON.stringify(webTypesContent, null, 2)
+  );
+}
+
+function createWebTypesTag(name, description, source, attributes) {
+  return {
+    name,
+    description,
+    source,
+    'doc-url': 'https://github.com/Hokid/vue-loaders',
+    attributes
+  };
+}
+
+function createWebTypesAttr(name, description, value, required = false, defaultValue) {
+  const result = {
+    name,
+    description,
+    value,
+    required
+  };
+
+  if (defaultValue && !required) {
+    result.default = defaultValue;
+  }
+
+  return result;
+}
+
+function formatName(fileName) {
+  return fileName
+    .replace('.js', '')
+    .split('-')
+    .map(_ =>
+      _.charAt(0)
+        ? _.charAt(0).toUpperCase() + _.slice(1)
+        : _
+    )
+    .join(' ');
+}
+
+function formatNameForSingleComponent(fileName) {
+  return fileName.replace('.js', '');
+}
+
+function formatTagName(fileName) {
+  return 'vue-loaders-' + fileName.replace('.js', '');
+}
+
+function formatUMDName(fileName) {
   return 'VueLoaders' + fileName
-    .split(/-|\.js/)
+    .replace('.js', '')
+    .split('-')
     .map(_ =>
       _.charAt(0)
         ? _.charAt(0).toUpperCase() + _.slice(1)

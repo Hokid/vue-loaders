@@ -16,6 +16,7 @@
     "README.md",
     "LICENSE.md"
   ],
+  "web-types": "./dist/web-types.json",
   "main": "dist/vue-loaders.umd.js",
   "module": "dist/vue-loaders.esm.js",
   "style": "dist/vue-loaders.css",
