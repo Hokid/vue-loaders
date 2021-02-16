@@ -42,9 +42,9 @@ for page
 
 It\`s mandatory step. Without this CSS your loaders will not appears on page.
 
-There is two ways how to use the library.
+There are two ways how to use the library.
 
-First is to use main component `vue-loaders`.
+The first is to use main component `vue-loaders`.
 
 ```html
 <vue-loaders name="ball-beat"></vue-loaders>
@@ -67,7 +67,7 @@ or on page
 </script>
 ```
 
-Second is to use separet loader component.
+The second is to use separet loader component.
 
 ```html
 <vue-loaders-ball-beat></vue-loaders-ball-beat>
