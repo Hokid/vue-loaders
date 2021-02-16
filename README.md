@@ -91,7 +91,7 @@ import VueLoaders from 'vue-loaders';
 Vue.use(VueLoaders);
 ```
 
-You can prefer first way or second of both of them. The main diffrent between them is when you use
+You can prefer first way or second or both of them. The main diffrent between them is when you use
 the second way you don\`t need to include all loaders to your bundle.
 
 Also check out props [here](#props) or use IDE tips, this library provide [web-types](https://github.com/JetBrains/web-types).
