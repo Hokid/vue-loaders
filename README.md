@@ -28,11 +28,77 @@ $ npm install -S vue-loaders
 
 ## Usage
 
-Take a look at available [names](#loaders) if you prefer `<vue-loaders name="{loader name}">` syntax. 
+Before starting playing with loaders include some CSS to you bundle or page:
 
-Take a look at available [components list](#loaders) if you prefer `<vue-loaders-{loader name}>` syntax. 
+```javascript
+import 'vue-loaders/dist/vue-loaders.css';
+```
+for bundle
 
-For available props see [props](#props).
+```html
+<link rel="stylesheet" href="https://unpkg.com/vue-loaders/dist/vue-loaders.css">
+```
+for page
+
+It\`s mandatory step. Without this CSS your loaders will not appears on page.
+
+There is two ways how to use the library.
+
+First is to use main component `vue-loaders`.
+
+```html
+<vue-loaders name="ball-beat"></vue-loaders>
+```
+`name` is name of loader. You will found all avaliable loaders names [here](#loaders).
+
+To use this way you should import `vue-loaders` and add this as plugin:
+
+```javascript
+import VueLoaders from 'vue-loaders';
+// add plugin
+Vue.use(VueLoaders);
+```
+or on page
+```html
+<script src="https://unpkg.com/vue-loaders"></script>
+
+<script>
+  Vue.use(VueLoaders);
+</script>
+```
+
+Second is to use separet loader component.
+
+```html
+<vue-loaders-ball-beat></vue-loaders-ball-beat>
+```
+You will found all avaliable loaders [here](#loaders).
+
+Import separate loader component and then add this as plugin:
+
+```javascript
+import VueLoadersBallBeat from 'vue-loaders/dist/loaders/ball-beat';
+
+Vue.use(VueLoadersBallBeat);
+```
+This way is good for perfomance and bundle size.
+
+...or import entier library just as for the fist way:
+
+```javascript
+import VueLoaders from 'vue-loaders';
+
+Vue.use(VueLoaders);
+```
+
+You can prefer first way or second of both of them. The main diffrent between them is when you use
+the second way you don\`t need to include all loaders to your bundle.
+
+Also check out props [here](#props) or use IDE tips, this library provide [web-types](https://github.com/JetBrains/web-types).
+
+
+
+And some examples:
 
 ```javascript
 import Vue from 'vue/dist/vue.esm.browser';
@@ -119,7 +185,7 @@ new Vue({
 }).$mount('#app');
 ```
 
-If you want setting a loader color in your styles, see example below:
+If you want manage loader color from CSS outside follow this example:
 ```javascript
 import Vue from 'vue/dist/vue.esm.browser';
 import 'vue-loaders/dist/vue-loaders.css';
