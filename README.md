@@ -28,7 +28,7 @@ $ npm install -S vue-loaders
 
 ## Usage
 
-Before starting playing with loaders include some CSS to you bundle or page:
+Before starting playing with loaders include some CSS to your bundle or page:
 
 ```javascript
 import 'vue-loaders/dist/vue-loaders.css';
